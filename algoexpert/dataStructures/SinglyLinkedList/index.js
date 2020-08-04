@@ -136,17 +136,18 @@ class SinglyLinkList {
         let node = this.head;
         this.head = this.tail;
         this.tail = node;
-        let next;
+        let next = null;
         let prev = null;
 
         for (let i = 0; i < this.length; i++) {
             next = node.next;
-            node.next = prev;
+            node = prev;
             prev = node;
             node = next;
         }
-        //  return this;
+        return this;
     }
+
     print() {
         let arr = [];
         let current = this.head;
@@ -154,7 +155,7 @@ class SinglyLinkList {
             arr.push(current.value);
             current = current.next;
         }
-        return arr;
+        console.log("arr", arr);
     }
     tranverse() {
         let current = this.head;
@@ -183,5 +184,8 @@ console.log("list.pop()", list.pop());*/
 //console.log("list", list.get(1));
 //console.log(list.print());
 
-console.log(list.reverse());
-console.log(list.print());
+//list.reverse();
+
+list.print();
+list.reverse();
+list.print();
