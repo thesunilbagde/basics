@@ -8,11 +8,10 @@ class ArrayList {
 
     */
     insertAt(index, value) {
-
       for(let i = this.length; i >= index; i--) {
-        this.data[i] = this.data[i-1];
+        let r = i-1;
+        this.data[i] = this.data[r];
       }
-
       this.data[index] = value;
       this.length++;
       return this.data;
@@ -58,3 +57,14 @@ class ArrayList {
 
     }
 }
+
+let array  =new ArrayList();
+
+array.push("a");
+array.push("b");
+array.push("c");
+array.push("d");
+array.push("e");
+array.insertAt(2,"aa")
+console.log("array", array);
+

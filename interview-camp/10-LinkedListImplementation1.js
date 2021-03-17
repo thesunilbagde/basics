@@ -62,9 +62,9 @@ class LinkedList {
        let currentNode = this.head;
        let currentIndex = 0;
        while(currentIndex < (index - 1)) {
-           currentNode = currentNode.next; 
-           currentIndex += 1; 
-       } 
+           currentNode = currentNode.next;
+           currentIndex += 1;
+       }
        let nodeAfterDeleted = currentNode.next.next;
         currentNode.next  = nodeAfterDeleted;
     }
@@ -85,8 +85,8 @@ list.insertAtIndex(0, 1);
 list.insertAtIndex(1, 2);
 list.insertAtIndex(2, 3);
 list.insertAtIndex(3, 4);
-list.insertAtIndex(4, 5);
-console.log("", list.toArray());
+list.insertAtIndex(1, 5);
+//console.log("", list.toArray());
 list.deleteAtIndex(4)
-
-console.log("", list.toArray());
+module.exports = list;
+//console.log("", list.toArray());
